@@ -49,39 +49,120 @@ table {
 
 /* end of reset */
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   height: 100vh;
   width: 100vw;
 }
 
-#top {
+.top {
   width: 100vw;
-  height: 33.333333333vh;
-  background-color: red;
+  height: 25vh;
+  border: 1px red solid;
 }
 
-#middle {
+.mid {
   width: 100vw;
-  height: 33.33333333vh;
-  background-color: blue;
+  height: 50vh;
+  border: 1px red solid;
+
+  .midOne {
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    border: 1px red solid;
+  }
+
+  .midTwo {
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    border: 1px red solid;
+  }
+
+  .midThree {
+    float: right;
+    height: 100%;
+    width: 33.33%;
+    border: 1px red solid;
+  }
 }
 
-#middle .topDiv {
-  background-color: blueviolet;
-  float: left;
-}
-
-#middle .midDiv {
-  background-color: purple;
-}
-
-#middle .endDiv {
+.end {
   width: 100vw;
-  height: 33.33333333vh;
-  background-color: rgb(212, 0, 255);
-  float: right;
+  height: 25vh;
+  border: 1px red solid;
 }
 
-#end {
-  background-color: brown;
+.clearfix {
+  overflow: auto;
+}
+
+/*----------------------------Media Queries----------------------------*/
+
+/* Ipad */
+@media only screen and (max-width: 1200px) {
+  .mid {
+    width: 100vw;
+    height: 50vh;
+    border: 1px red solid;
+  
+    .midOne {
+      float: left;
+      height: 50%;
+      width: 50%;
+      border: 1px red solid;
+    }
+  
+    .midTwo {
+      float: left;
+      height: 50%;
+      width: 50%;
+      border: 1px red solid;
+    }
+  
+    .midThree {
+      float: right;
+      height: 50%;
+      width: 100%;
+      border: 1px red solid;
+    }
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 500px) {
+  .mid {
+    width: 100vw;
+    height: 50vh;
+    border: 1px red solid;
+  
+    .midOne {
+      float: none;
+      height: 33.33%;
+      width: 100%;
+      border: 1px red solid;
+    }
+  
+    .midTwo {
+      float: none;
+      height: 33.33%;
+      width: 100%;
+      border: 1px red solid;
+    }
+  
+    .midThree {
+      float: none;
+      height: 33.33%;
+      width: 100%;
+      border: 1px red solid;
+    }
+  }
 }
